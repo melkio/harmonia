@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Harmonia.Host/Harmonia.Host.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Harmonia.Tests/Harmonia.Tests.csproj" />
+  </Folder>
+</Solution>

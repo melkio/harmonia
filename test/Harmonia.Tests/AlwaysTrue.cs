@@ -1,4 +1,4 @@
-namespace DotNetTemplate.Tests;
+namespace Harmonia.Tests;
 
 public class Tests
 {
