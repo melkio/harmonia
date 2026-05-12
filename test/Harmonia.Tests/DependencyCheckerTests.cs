@@ -68,7 +68,7 @@ public class DependencyCheckerTests
     {
         var body = """
             ## Blocked by
-            - [ ]  #10
+            - [] #10
             """;
 
         var blockers = DependencyChecker.ParseBlockerNumbers(body);

@@ -14,10 +14,13 @@ public sealed class HookRunner : IHookRunner
         using var timeout = new CancellationTokenSource(timeoutMs);
         using var linked = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, timeout.Token);
 
+        var shell = OperatingSystem.IsWindows() ? "cmd.exe" : "/bin/bash";
+        var shellArgument = OperatingSystem.IsWindows() ? "/c" : "-lc";
+
         var startInfo = new ProcessStartInfo
         {
-            FileName = "/bin/bash",
-            ArgumentList = { "-lc", command },
+            FileName = shell,
+            ArgumentList = { shellArgument, command },
             WorkingDirectory = workingDirectory,
             RedirectStandardOutput = true,
             RedirectStandardError = true
