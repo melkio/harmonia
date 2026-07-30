@@ -21,4 +21,8 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Harmonia.Host\Harmonia.Host.csproj" />
+  </ItemGroup>
+
 </Project>
